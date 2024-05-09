@@ -1,0 +1,22 @@
+class Solution(object):
+    @staticmethod
+    def twoSum(array, target):
+        pt_left = 0
+        pt_right = len(array) - 1  
+
+        while pt_left < pt_right:
+            somme = array[pt_left] + array[pt_right] 
+
+            if somme == target:
+                return [pt_left + 1, pt_right + 1]  
+            
+            elif somme < target:
+                pt_left += 1  
+            
+            else:
+                pt_right -= 1  
+
+        return []  
+ 
+  x1 = Solution.twoSum([2, 7, 11, 15], 9)
+print(ex1)  
